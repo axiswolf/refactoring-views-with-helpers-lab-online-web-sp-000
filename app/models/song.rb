@@ -5,7 +5,7 @@ class Song < ActiveRecord::Base
     self.artist ? self.artist.name : nil
   end
 
-  def artist_name=(name) # setter 
+  def artist_name=(name) # setter
     self.artist = Artist.find_or_create_by(name: name)
   end
 end
